@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Chords</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Acordes de Guitarra</h1>
+        <p class="header-q">¿Estas tocando un acorde que te gusta como suena pero no sabes como se denomina musicalmente?</p>
+        <p class="header-a">No hay problema, ¡ingresá el acorde y obtené su nombre!</p>
+    </header>
+    <main>
+        <section class="references">
+            <span class="references-value">0</span>
+            <p class="references-txt">Cuerdas al aire</p>
+            <span class="references-value">X</span>
+            <p class="references-txt">Cuerdas que no se tocan</p>
+            <span class="references-value">1 - 12</span>
+            <p class="references-txt">Trastes del 1 al 12</p>
+        </section>
+        <!-- <section class="example">
+            <p class="example-txt">Ejemplo: 0-2-2-1-0-0  (E)</p>
+        </section> -->
+        <form id="form" action="">
+            <div id="strings-container">
+                <input type="text" maxlength="2" placeholder="E" name="string-6" id="string-6" class="string-input">
+                <input type="text" maxlength="2" placeholder="A" name="string-5" id="string-5" class="string-input">
+                <input type="text" maxlength="2" placeholder="D" name="string-4" id="string-4" class="string-input">
+                <input type="text" maxlength="2" placeholder="G" name="string-3" id="string-3" class="string-input">
+                <input type="text" maxlength="2" placeholder="B" name="string-2" id="string-2" class="string-input">
+                <input type="text" maxlength="2" placeholder="E" name="string-1" id="string-1" class="string-input">
+            </div>
+            <button type="submit">🔍</button>
+            <small id="form-message" class="form-message">Ejemplo: 0-2-2-1-0-0  (E)</small>
+        </form>
+        <div id="chord-card-container"></div>
+    </main>
+    <footer>
+        <a id="sign" href="https://github.com/RamiroPerez07" target="to_blank">Ramiro Perez <i class="fa-brands fa-github"></i></a>
+    </footer>
+    <!--Custom JS-->
+    <script src="./index.js"></script>
+</body>
+</html>

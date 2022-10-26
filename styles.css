@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+html{
+    font-size: 14px;
+}
+
+:root{
+    --color0: #0f0f0f;
+    --color1: #ebebeb;
+    --color2: #961be7;
+    --color3: #9e40dd;
+    --color4: #e71bc5;
+    --color5: #2c2c2c;
+    --color6: #181818;
+    --colorErr: #fa134d;
+    --colorSucc: #6cf06c;
+    --fs-small0: 0.8rem;
+    --fs-small1: 0.9rem;
+    --fs-medium0: 1.2rem;
+    --fs-large0: 1.4rem;
+    --fs-xlarge0: 1.8rem;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    padding: 15px 15px;
+    gap: 15px;
+}
+
+h1{
+    font-size: var(--fs-xlarge0);
+    color: var(--color2);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.header-q{
+    color: var(--color1);
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-a{
+    color: var(--color1);
+    font-weight: 300;
+    text-align: center;
+
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px 1fr;
+    place-items: center;
+    background-color: var(--color0);
+    gap: 12px;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 70px 90px 1fr;
+    place-items: center;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+input[type="text"]{
+    color: var(--color1);
+    background-color: var(--color5);
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width: 35px;
+    font-size: var(--fs-large0);
+    text-align: center;
+}
+
+input[type="text"]:focus,
+button:focus{
+    outline: none;
+    box-shadow: 0px 0px 3px 1px var(--color2);
+}
+
+.error{
+    box-shadow: 0px 0px 3px 1px var(--colorErr) !important;
+}
+
+button{
+    height: 100%;
+    width: 100%;
+    background-color: var(--color2);
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+button:hover{
+    background-color: var(--color3);
+    transition: all 0.5s;
+}
+
+.references{
+    width: 95%;
+    max-width: max-content;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.references-txt{
+    width: 100%;
+    color: var(--color3)
+}
+
+.references-value{
+    width: 100%;
+    color: var(--color1)
+}
+
+/* .example{
+    width: 95%;
+    max-width: max-content;
+    height: 30px;
+    display: grid;
+    place-items: center;
+}
+
+.example-txt{
+    font-size: var(--fs-small0);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color1);
+} */
+
+#form{
+    width: 95%;
+    max-width: 290px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    place-items: center;
+    gap: 10px;
+}
+
+#form-message{
+    font-size: var(--fs-small0);
+    grid-column: 1/3;
+    width: 100%;
+    color: var(--colorSucc);
+    text-align: center;
+    margin-top: 10px;
+    height: 30px;
+}
+
+#form-message.msj-error{
+    color: var(--colorErr);
+}
+
+#form-message.msj-success{
+    color: var(--colorSucc);
+}
+
+
+
+#chord-card-container{
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    background-color: var(--color6);
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.card{
+    width: 100%;
+    max-width: 390px;
+    height: 100%;
+    max-height: 245px;
+    background-color: var(--color6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 15px;
+}
+
+.card-labels{
+    color: var(--color1);
+    font-size: var(--fs-medium0);
+    width: 100%;
+}
+
+.chord-result{
+    color: var(--color4);
+    font-size: var(--fs-medium0);
+    width: 100%;
+}
+
+
+footer{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    background-color: var(--color6);
+    padding: 0 15px;
+}
+
+#sign{
+    text-decoration: none;
+    color: var(--color2);
+    opacity: 0.7;
+    font-size: var(--fs-small1);
+    transition: all 0.5s;
+}
+
+#sign:hover{
+    color: var(--color3);
+    opacity: 1;
+    filter: brightness(1.05) ;
+    transition: all 0.5s;
+}
+
+@media (max-width: 1024px){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 425px){
+    html{
+        font-size: 10px;
+    }
+
+    input[type="text"]{
+        height: 25px;
+        width: 30px;
+    }
+}
