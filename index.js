@@ -83,7 +83,7 @@ function isEmpty(value){
 }
 
 function isInputValueValid(value){
-    const regExp = /((^[0-9]$)|(^1[0-2]$))|[X]/;
+    const regExp = /((^[0-9]$)|(^1[0-2]$))|(\bX\b)/;
     return regExp.test(value);
 }
 
