@@ -61,7 +61,7 @@ function renderChordCard(arrayChord){
 
 function checkInput(input){
     valid = false;
-    const inputValue = input.value.trim();
+    const inputValue = input.value.trim().toUpperCase();
     if(isEmpty(inputValue)){
         focusWrongInput(input)
         showError("Debes completar todas las entradas. Si la nota no se toca, recordá colocar 'X'. Si se toca al aire, ingresa '0'.")
@@ -83,7 +83,7 @@ function isEmpty(value){
 }
 
 function isInputValueValid(value){
-    const regExp = /((^[0-9]$)|(^1[0-2]$))|[x]|[X]/;
+    const regExp = /((^[0-9]$)|(^1[0-2]$))|[X]/;
     return regExp.test(value);
 }
 
